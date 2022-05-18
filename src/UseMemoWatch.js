@@ -28,9 +28,9 @@ function UseMemoComputed () {
     useMemo(() => console.log('useMemo : '+text), [text]);
     // useEffect로
     useEffect(() => {
-        console.log('useEffect _ Y _ 값이 설정됨: '+text)
+        console.log('useMemoWatch callback _ text : '+text)
         return (
-            console.log('useEffect _ Y _ cleanup : '+text)
+            console.log('useMemoWatch callback _ text : '+text)
         )
     }, [text])
 

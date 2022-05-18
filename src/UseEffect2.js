@@ -11,9 +11,9 @@ function UseEffect2 ({props}) {
     /* warning
     Q. count 값에 접근이 안된다. 생각하지 않아도 되는 경우같지만 그래도 궁금하다.
     useEffect(()=>{
-        console.log('UseEffect2 callback: '+ count);
+        console.log('UseEffect2 callback : '+ count);
         return () => {
-            console.log('UseEffect2 cleanup: '+ count);
+            console.log('UseEffect2 cleanup : '+ count);
         };
     }, []);
 

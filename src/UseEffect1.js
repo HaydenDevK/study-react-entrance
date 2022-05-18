@@ -14,9 +14,9 @@ function UseEffect1 ({props, propsRef}) {
     }
 
     useEffect(()=>{
-        console.log('UseEffect1 callback: '+ count);
+        console.log('UseEffect1 callback : '+ count);
         return () => {
-            console.log('UseEffect1 cleanup: '+ count);
+            console.log('UseEffect1 cleanup : '+ count);
             /*
                 - count 값이 변경되면 실행
                     - 이전 값을 본다.
