@@ -11,8 +11,8 @@ import UseRefDomInput from "./UseRefDomInput";
 import ArrayRenderBad from "./ArrayRenderGood";
 import ArrayRenderGood from "./ArrayRenderBad";
 import UseEffectParent from './UseEffectParent'
-// import UseMemoComputed from './UseMemoComputed';
-// import UseMemoWatch from './UseMemoWatch';
+import UseMemoComputed from './UseMemoComputed';
+import UseMemoWatch from './UseMemoWatch';
 import {useEffect} from 'react';
 
 
@@ -115,8 +115,8 @@ function App() {
         
         {/* useMemo */}
         <h2># useMemo</h2>
-        {/* <UseMemoComputed />
-        <UseMemoWatch /> */}
+        <UseMemoComputed />
+        <UseMemoWatch />
       </section>
     </div>
   );

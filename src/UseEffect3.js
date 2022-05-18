@@ -9,9 +9,9 @@ function UseEffect3 ({props, propsRef}) {
     }
 
     useEffect(() => {
-        console.log('UseEffect3 callback: ' + count);
+        console.log('UseEffect3 callback : ' + count);
         return () => {
-            console.log('UseEffect3 cleanup: ' + count);
+            console.log('UseEffect3 cleanup : ' + count);
         };
     });
 
