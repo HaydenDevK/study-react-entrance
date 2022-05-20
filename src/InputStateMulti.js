@@ -45,8 +45,7 @@ function InputStateMulti() {
       />
       <button onClick={onReset}>초기화</button>
       <div>
-        값:
-        {name} ({nickname})
+        이름: {name} (닉네임 : {nickname})
       </div>
     </div>
   );

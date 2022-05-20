@@ -4,6 +4,8 @@ body {
   font-family: 'Gowun Dodum', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  vertical-align: top;
+  box-sizing: border-box;
 }
 
 code {

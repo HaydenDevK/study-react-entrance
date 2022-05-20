@@ -36,8 +36,9 @@ function UseMemoComputed () {
 
     return (
         <div>
+            <h3># like `watch`</h3>
             <input value={text} onChange={onChange} />
-            <div>콘솔을 보시오</div>
+            <div>콘솔을 보시옹</div>
         </div>
     )
 }

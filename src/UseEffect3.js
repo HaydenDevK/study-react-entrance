@@ -22,8 +22,9 @@ function UseEffect3 ({props, propsRef}) {
                 {count}
             </button>
             <div>
-                - 컴포넌트가 리렌더링될 때 마다 : UseEffect3 cleanup 함수 실행 &raquo; UseEffect3 callback 함수 실행<br/>
-                - 그렇다면 여기서 다시 체크! *리렌더링 되는 때가 언제?*
+                - 컴포넌트가 리렌더링될 때 마다 : UseEffect3 cleanup 함수 실행 {'=>'} UseEffect3 callback 함수 실행<br/>
+                - 그렇다면, 여기서 다시 체크! <b>언제 리렌더링 되는지?</b><br/>
+                - 그리고,
             </div>
         </div>
     )

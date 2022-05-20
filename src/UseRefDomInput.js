@@ -30,6 +30,7 @@ function UseRefDomInput() {
   };
   return (
     <div>
+      <h4>* 예제2</h4>
       {/* 2. 원하는 DOM 요소에 ref 지정 */}
       <input
         placeholder="이름"
@@ -47,8 +48,7 @@ function UseRefDomInput() {
       <button onClick={onReset}>초기화</button>
       <div>(초기화 버튼을 누르면 이름 input으로 focus)</div>
       <div>
-        값:
-        {name} ({nickname})
+        이름: {name} (닉네임 : {nickname})
       </div>
     </div>
   );

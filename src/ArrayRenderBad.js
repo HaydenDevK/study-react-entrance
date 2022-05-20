@@ -29,6 +29,7 @@ function UserList () {
     }
     return (
         <div>
+            <h3># bad</h3>
             {/* 3. 그 컴포넌트 함수를 3개 호출해서 사용한다. */}
             <User user={users[0]} />
             <User user={users[1]} />

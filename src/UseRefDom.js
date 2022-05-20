@@ -9,13 +9,14 @@ function UseRefDom () {
   }
     return(
         <div>
+            <h4>* 예제1</h4>
             <input 
                 onClick={onClickFocus}
                 placeholder='여기를 클릭하면'
             />
             <input 
                 ref={refSample}
-                placeholder='여기로 focus 넘어오게'
+                placeholder='여기로 focus 넘어오지'
             />
         </div>
     )

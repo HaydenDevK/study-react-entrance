@@ -33,7 +33,7 @@ function UseEffect2 ({props}) {
                 {count}
             </button>
             <div>
-                - 그냥 더도 덜도 말고 무조건 : 첫 마운트 때 callback 함수 1번 &raquo; 언마운트 때 cleanup 함수 1번만 실행된다.<br/>
+                - 그냥 더도 덜도 말고 무조건 : 첫 마운트 때 callback 함수 1번 {'=>'} 언마운트 때 cleanup 함수 1번만 실행된다.<br/>
                 (아무리 위 버튼을 눌러도 실제 값은 바뀌지만 리렌더링 되지 않는다.)
             </div>
         </div>

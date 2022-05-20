@@ -33,7 +33,7 @@ function UseEffect1 ({props, propsRef}) {
                 {count}
             </button>
             <div>
-                - 특정 값(count)이 변경될 때 : UseEffect1 cleanup 함수 실행 (변경 전 값을 본다) &raquo; UseEffect3 callback 함수 실행(변경된 최신 값을 본다?)
+                - 특정 값(count)이 변경될 때 : UseEffect1 cleanup 함수 실행 (변경 전 값을 본다) {'=>'} UseEffect3 callback 함수 실행(변경된 최신 값을 본다?)
             </div>
         </div>
     )

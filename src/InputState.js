@@ -15,9 +15,9 @@ function InputState() {
 
   return (
     <div>
-      <input onChange={onChange} value={text} />
+      <input onChange={onChange} value={text} placeholder='text' />
       <button onClick={onReset}>초기화</button>
-      <div> 값: {text} </div>
+      <div> text: {text} </div>
     </div>
   );
 }

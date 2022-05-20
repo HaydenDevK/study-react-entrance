@@ -168,8 +168,8 @@ function UseEffectParent () {
   
   return (
     <div>
-      <h2># useEffect</h2>
-      <h3>- 개요</h3>
+      <h2>[ useEffect ]</h2>
+      <h3># 개요</h3>
       <h4>1. 첫번째 파라미터 : callback 함수 (useEffect가 실행될 때 실행되는 로직)</h4>
       <h4>2. 두번째 파라미터 : celanup 함수</h4>
       <div>
@@ -189,11 +189,11 @@ function UseEffectParent () {
       </div>       
 
       {/* useRef로 컴포넌트 내 조회, 수정할 수 있는 변수 관리하기 */}
-      <h3>-  배열 렌더링 + 변수 관리 (삭제, 토글 테스트는 아래에서)</h3>
+      <h3># 배열 렌더링 + 변수 관리 (삭제, 토글 테스트는 아래에서)</h3>
       <UserList users={usersFromParent} />
 
-      {/* 배열 항목 CRUD */}
-      <h3>-  배열 항목 CRUD</h3>
+      {/* 배열 CRUD */}
+      <h3># 배열 CRUD</h3>
       <ArrayCrud
         username={username}
         email={email}
@@ -207,7 +207,7 @@ function UseEffectParent () {
       />
       
       {/* useEffect */}
-      <h3>-  UseEffect _ cleanup</h3>
+      <h3>#  UseEffect _ cleanup</h3>
       <UseEffect1 props={props} propsRef={propsRef.current} />
       <UseEffect2 props={props} propsRef={propsRef.current} />
       <UseEffect3 props={props} propsRef={propsRef.current} />
@@ -222,8 +222,7 @@ function UseEffectParent () {
           <div>
             변경 시 : <br/>
             1. UseEffect3 cleanup<br/>
-            2. UseEffectParent cleanup<br/>
-            3. UseEffect3 callback<br/>
+            2. UseEffect3 callback<br/>
           </div>
         </li>
 
@@ -242,10 +241,11 @@ function UseEffectParent () {
           </div>
         </li>
       </ol>
-      <h3>- 넘어가기 전에 Q&A</h3>
-      <h4>Q1. 현 테스트 화면 내에서 계속 cleanup 함수가 꼭 먼저 실행되고 -> callback 함수가 실행되는데.. 원래 그런건지? 리액트 18이후 버전이라 그런건지?</h4>
-      <h3>- 덤 _ 무한루프 </h3>
-      <h4>1. 의존성 배열 없이 콜백 함수에서 데이터 페칭을 하면? </h4>
+      <h3># 넘어가기 전에</h3>
+      <h4>Q. 본 테스트 화면 내에서 계속 cleanup 함수가 꼭 먼저 실행되고 {'=>'} callback 함수가 실행되는데.. 원래 그런건지? 리액트 18이후 버전이라 그런건지?</h4>
+      <div>A. 18버전 StrictMode가 적용된 경우, 개발 모드에서만 mount {'=>'} unmount {'=>'} mount 사이클로 실행되기 때문이다.</div>
+      <h3># 덤 _ 무한루프 </h3>
+      <h4>1. 의존성 배열 없이 콜백 함수에서 데이터 Fetch 하면? </h4>
       <div>매 렌더링 시에 콜백 함수가 실행되고, 무한 루프가 실행될 수 있다.</div>
       <h4>2. 의존성 배열 항상 바뀌는 값(ref 말고 리렌더링을 야기시키는 값)을 지정하면?</h4>
       <div> 역시나 무한 루프가 실행될 수 있다.</div>

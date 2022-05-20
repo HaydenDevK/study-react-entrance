@@ -8,19 +8,22 @@ import InputStateMulti from "./InputStateMulti";
 import UseRefDom from './UseRefDom';
 import UseRefVariable from './UseRefVariable'
 import UseRefDomInput from "./UseRefDomInput";
-import ArrayRenderBad from "./ArrayRenderGood";
-import ArrayRenderGood from "./ArrayRenderBad";
+import ArrayRenderBad from "./ArrayRenderBad";
+import ArrayRenderGood from "./ArrayRenderGood";
 import UseEffectParent from './UseEffectParent'
+import {useEffect} from 'react';
 import UseMemoComputed from './UseMemoComputed';
 import UseMemoWatch from './UseMemoWatch';
-import {useEffect} from 'react';
+import CountNoUseMemo from "./CountNoUseMemo";
+import CountYesUseMemo from "./CountYesUseMemo";
+import UseCallback from "./UseCallback";
 
 
 function App() {
 
   useEffect(()=>{
     return()=>{
-      console.log('App.js cleanup')
+      console.log('App.js cleanup (React.StrictMode가 적용 시에만 찍힙니다)')
     }
   })
 
@@ -39,7 +42,7 @@ function App() {
 
       <section className="App-section">
         {/* JSX 조건문 _ 삼항연산자 */}
-        <h2># JSX 조건문 _ 삼항연산자</h2>
+        <h2>[ JSX 조건문 _ 삼항연산자 ]</h2>
         
         <div className="Class-Test">
           {loginYn === "Y" ? (
@@ -62,14 +65,14 @@ function App() {
         </div>
 
         {/* component, props */}
-        <h2># component, props</h2>
+        <h2>[ component, props ]</h2>
         <Hello
           user="sophie"
           color="blue"
         />
 
         {/* component, props.children */}
-        <h2># component, props.children</h2>
+        <h2>[ component, props.children ]</h2>
         <Wrapper>
           <Hello
             user="sophie"
@@ -78,35 +81,35 @@ function App() {
         </Wrapper>
 
         {/* 조건부 렌더링 */}
-        <h2># 조건부 렌더링</h2>
+        <h2>[ 조건부 렌더링 ]</h2>
         <IsRender isRender={true} />
         <IsRender isRender /> {/* 값 생략 시, default true로 간주 */}
 
         {/* UseState */}
-        <h2># UseState</h2>
+        <h2>[ UseState ]</h2>
+
+        {/* input을 useState로 상태 관리 */}
+        <h3># counter 예제 </h3>
         <UseStateCounter />
 
-        {/* input state 관리 */}
-        <h2># input state 관리</h2>
+        {/* input을 useState로 상태 관리 */}
+        <h3># input을 useState로 상태 관리 </h3>
         <InputState />
 
         {/* multiple input state 관리 */}
-        <h2># multiple input state</h2>
+        <h3># multiple input state</h3>
         <InputStateMulti />
 
         {/* useRef basic */}
-        <h2># useRef _ 첫번째 용도 _ DOM 조작</h2>
+        <h2>[ useRef ]</h2>
+        <h3># 첫번째 용법 _ DOM 조작</h3>
         <UseRefDom />
-
-        <h2># useRef _ 두번째 용도 _ 지역 변수</h2>
+        <UseRefDomInput />
+        <h3># 두번째 용법 _ 지역 변수</h3>
         <UseRefVariable />
 
-        {/* useRef */}
-        <h2># useRef _ 첫번째 용도 _ DOM 조작 (input)</h2>
-        <UseRefDomInput />
-
-        {/* 배열 렌더링 v-for 같은 거 */}
-        <h2># 배열 렌더링</h2>
+        {/* 배열 렌더링 vue의 v-for ish.. */}
+        <h2>[ 배열 렌더링 ]</h2>
         <ArrayRenderBad />
         <ArrayRenderGood />
 
@@ -114,9 +117,15 @@ function App() {
         <UseEffectParent />
         
         {/* useMemo */}
-        <h2># useMemo</h2>
+        <h2>[ useMemo ]</h2>
         <UseMemoComputed />
         <UseMemoWatch />
+        <CountNoUseMemo />
+        <CountYesUseMemo />
+
+        {/* useCallback */}
+        <h2>[ useCallback ]</h2>
+        <UseCallback />
       </section>
     </div>
   );

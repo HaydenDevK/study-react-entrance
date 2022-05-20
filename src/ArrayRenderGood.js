@@ -37,6 +37,7 @@ function UserList () {
 
             {/* 3. 그 컴포넌트 함수를 3개 호출해서 사용하는데, map으로 축약한다! */}
             {/* good */}
+            <h3># good</h3>
             {users.map(user => (
                 <User user={user} key={user.id} />
             ))}

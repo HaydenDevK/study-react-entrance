@@ -29,6 +29,7 @@ function UseMemoComputed () {
 
     return (
         <div>
+            <h3># like `computed`</h3>
             <input value={text} onChange={onChange} />
             <div>capitalizedText: {capitalizedText}</div>
         </div>
