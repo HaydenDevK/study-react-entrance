@@ -17,12 +17,13 @@ function UseStateCounter() {
   };
   const onDncrease = () => {
     console.log("onDncrease");
-    setNumber((number) => number - 1); // 3-4. setter 함수 함수형 업데이트 _ 기존 값(preNumber)을 "어떻게 업데이트 할지"
-    console.dir(number);
+    setNumber((number) => number - 1) // 3-4. setter 함수 함수형 업데이트 _ 기존 값(preNumber)을 "어떻게 업데이트 할지"
+    console.log(number);
     /*
         Q1. 기대한 값은 변경 후 값인데, 변경 전 값이 나온다 이유는?
         A. setState가 비동기로 처리되기 때문에, setInputs가 미처 끝나기 전에 console.log가 실행되어 기존의 inputs가 그대로 찍힌 것이다.
             https://zereight.tistory.com/779 참고
+            async await로도 가능할까 했는데 안된다
 
         Q2. 상태값 변경을 배치로 처리한다?
         A.

@@ -17,7 +17,7 @@ import UseMemoWatch from './UseMemoWatch';
 import CountNoUseMemo from "./CountNoUseMemo";
 import CountYesUseMemo from "./CountYesUseMemo";
 import UseCallback from "./UseCallback";
-
+import DragDrop from './DragDrop';
 
 function App() {
 
@@ -125,7 +125,13 @@ function App() {
 
         {/* useCallback */}
         <h2>[ useCallback ]</h2>
+        {/* <UseCallback />s */}
         <UseCallback />
+
+        {/* drag and drop */}
+        <h2>[ drag and drop ]</h2>
+        <DragDrop />
+        k
       </section>
     </div>
   );

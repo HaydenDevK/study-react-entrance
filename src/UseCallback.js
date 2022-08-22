@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import UseCallbackBasic from './UseCallbackBasic';
 import ArrayCrud2 from './ArrayCrud2';
 import UserList2 from './UserList2';
+import UseEffectQuiz from './UseEffectQuiz';
 
 function UseCallback () {
     const [inputs, setInputs] = useState({
@@ -77,6 +78,11 @@ function UseCallback () {
         <> 
             <h3># 간단 예제</h3>
             <UseCallbackBasic />
+            
+            <h3># 심화 예제 </h3>
+            <UseEffectQuiz />
+
+            {/* React.memo 만들어서 따로 옮기기 */}
             <h3># CRUD with `useMemo`, `useCallback`, `React.memo`</h3>
 
             <h4>* 예제</h4>
@@ -90,7 +96,6 @@ function UseCallback () {
             <UserList2 users={users} onRemove={onRemove} />
             <div>한국인 수 : <b>{count}</b></div>
             ```
-            
         </>
     )
 }

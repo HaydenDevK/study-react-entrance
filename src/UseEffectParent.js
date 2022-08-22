@@ -241,6 +241,7 @@ function UseEffectParent () {
           </div>
         </li>
       </ol>
+
       <h3># 넘어가기 전에</h3>
       <h4>Q. 본 테스트 화면 내에서 계속 cleanup 함수가 꼭 먼저 실행되고 {'=>'} callback 함수가 실행되는데.. 원래 그런건지? 리액트 18이후 버전이라 그런건지?</h4>
       <div>A. 18버전 StrictMode가 적용된 경우, 개발 모드에서만 mount {'=>'} unmount {'=>'} mount 사이클로 실행되기 때문이다.</div>

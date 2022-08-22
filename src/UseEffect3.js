@@ -12,7 +12,7 @@ function UseEffect3 ({props, propsRef}) {
         console.log('UseEffect3 callback : ' + count);
         return () => {
             console.log('UseEffect3 cleanup : ' + count);
-        };
+        };g
     });
 
     return (
